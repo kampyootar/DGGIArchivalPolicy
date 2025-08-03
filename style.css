@@ -244,7 +244,7 @@
   --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
   --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
   --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
   --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
   --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
@@ -1757,39 +1757,149 @@ select.form-control {
 }
 .problem-card .close-btn {
     position: absolute;
-    top: 18px;
-    right: 18px;
-    background: #fff;
+    top: 12px;
+    right: 16px;
+    background: #eee;
     border: none;
-    font-size: 1.3rem;
-    cursor: pointer;
+    font-size: 1.5rem;
+    color: #888;
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     width: 32px;
     height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    cursor: pointer;
     opacity: 0.7;
-    transition: opacity 0.2s;
-}
-.problem-card .close-btn:hover {
-    opacity: 1;
-}
-/* Popup Overlay */
-.popup-overlay {
+    z-index: 20;
+    transition: background 0.2s, color 0.2s;
     display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(30, 32, 34, 0.65); /* Increased opacity for stronger dim */
-    z-index: 99999;
-    transition: opacity 0.3s;
 }
 
-.problem-card.expanded ~ .popup-overlay,
-.popup-overlay.active {
+.problem-card.expanded .close-btn {
     display: block;
 }
 
+.problem-card .close-btn:hover {
+    background: #f44336;
+    color: #fff;
+    opacity: 1;
+}
+
+/* Container for all problem cards */
+.need-problem-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Individual card styling */
+.need-problem-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    width: 320px;
+    min-height: 180px;
+    padding: 1.5rem 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.need-problem-card:hover {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    transform: translateY(-2px) scale(1.02);
+}
+
+/* Expanded state */
+.need-problem-card.expanded {
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transform: scale(1.04);
+    min-height: 340px;
+    max-width: 420px;
+}
+
+/* Hide details by default */
+.need-problem-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s;
+    margin-top: 0;
+}
+
+/* Show details when expanded */
+.need-problem-card.expanded .need-problem-details {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 1.2rem;
+}
+
+/* Details content styling */
+.need-details-text {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 0.7rem;
+}
+
+/* Image inside details */
+.need-problem-details img {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+}
+
+/* Close button styling */
+.need-problem-card .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: #eee;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0.7;
+    z-index: 20;
+    transition: background 0.2s, color 0.2s;
+    display: none;
+}
+
+.need-problem-card.expanded .close-btn {
+    display: block;
+}
+
+.need-problem-card .close-btn:hover {
+    background: #f44336;
+    color: #fff;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .need-problem-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .need-problem-card {
+        width: 95vw;
+        max-width: 98vw;
+    }
+}
+
+.need-problem-card .need-problem-details {
+    display: none;
+}
+
+.need-problem-card.expanded .need-problem-details {
+    display: block;
+}

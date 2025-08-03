@@ -486,8 +486,30 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.slide-content').forEach(content => {
         content.style.scrollBehavior = 'smooth';
     });
+
+	    const cards = document.querySelectorAll('.need-problem-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Collapse all cards first
+            cards.forEach(c => c.classList.remove('expanded'));
+            // Expand the clicked card
+            card.classList.add('expanded');
+        });
+
+        // Handle close button inside card
+        const closeBtn = card.querySelector('.close-btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent triggering card click
+                card.classList.remove('expanded');
+            });
+        }
+    });
     
     console.log('DGGI Digital Archival Policy Presentation loaded successfully');
     console.log('Use keyboard shortcuts or navigation buttons to control the presentation');
     console.log('Press ? for help');
 });
+
+
