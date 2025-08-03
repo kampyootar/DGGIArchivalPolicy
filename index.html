@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGGI Digital Archival Policy Presentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Navigation Header -->
+        <header class="presentation-header">
+            <div class="nav-controls">
+                <button id="prevBtn" class="nav-btn">← Previous</button>
+                <span class="slide-counter">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">12</span>
+                </span>
+                <button id="nextBtn" class="nav-btn">Next →</button>
+            </div>
+            <div class="slide-navigation">
+                <button class="slide-nav-btn active" data-slide="0">Title</button>
+                <button class="slide-nav-btn" data-slide="1">Summary</button>
+                <button class="slide-nav-btn" data-slide="2">Problems</button>
+                <button class="slide-nav-btn" data-slide="3">Legal</button>
+                <button class="slide-nav-btn" data-slide="4">Court</button>
+                <button class="slide-nav-btn" data-slide="5">Process</button>
+                <button class="slide-nav-btn" data-slide="6">Technology</button>
+                <button class="slide-nav-btn" data-slide="7">Costs 1</button>
+                <button class="slide-nav-btn" data-slide="8">Costs 2</button>
+                <button class="slide-nav-btn" data-slide="9">Timeline</button>
+                <button class="slide-nav-btn" data-slide="10">Roles</button>
+                <button class="slide-nav-btn" data-slide="11">Thank You</button>
+            </div>
+        </header>
+
+        <!-- Slides Container -->
+        <main class="slides-container">
+            <!-- Slide 1: Title -->
+            <section class="slide active" data-slide="0">
+                <div class="slide-content title-slide">
+                    <div class="title-content">
+                        <div class="logo-section">
+                            <div class="dggi-logo">DGGI</div>
+                        </div>
+                        <h1 class="main-title">Digital Archival Policy</h1>
+                        <h2 class="subtitle">Securing Evidence for Court Success</h2>
+                        <p class="presentation-date">Implementation Strategy & Framework</p>
+						<p class="subtext" style="font-size:1.7rem; color:#555; margin-top:12px;">
+							A Presentation by DGGI, Visakhapatnam Zonal Unit
+						</p>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Welcome to the DGGI Digital Archival Policy presentation. This policy aims to establish a secure, legally compliant system for preserving digital evidence that will stand up in court.
+                </div>
+            </section>
+
+            <!-- Slide 2: Executive Summary -->
+            <section class="slide" data-slide="1">
+                <div class="slide-content">
+                    <h1>What is Digital Archival Policy?</h1>
+                    <div class="content-with-image">
+                        <div class="content-text">
+							<ul class="key-points">
+								<li class="expandable-point">
+									<h3><span class="point-title">A secure system to store all DGGI case records digitally</span></h3>
+									<div class="point-details">
+										<h4>Enables centralized access, reduces physical storage needs, and improves searchability.</h4>
+									</div>
+								</li>
+								<li class="expandable-point">
+									<h3><span class="point-title">Ensures evidence remains valid in court even if originals are lost</span></h3>
+									<div class="point-details">
+										<h4>Digital copies are legally admissible if certified, protecting against accidental loss.</h4>
+									</div>
+								</li>
+								<li class="expandable-point">
+									<h3><span class="point-title">Uses government cloud storage and blockchain technology</span></h3>
+									<div class="point-details">
+										<h4>Government cloud ensures compliance; blockchain provides tamper-proof tracking.</h4>
+									</div>
+								</li>
+								<li class="expandable-point">
+									<h3><span class="point-title">Protects against disasters, theft, and tampering</span></h3>
+									<div class="point-details">
+										<h4>Offsite backups and encryption safeguard data from physical and cyber threats.</h4>
+									</div>
+								</li>
+								<li class="expandable-point">
+									<h3><span class="point-title">Follows all legal requirements for evidence admissibility</span></h3>
+									<div class="point-details">
+										<h4>Meets standards under BSA 2023, CGST Act, and IT Act for court acceptance.</h4>
+									</div>
+								</li>
+							</ul>
+                        </div>
+                        <div class="content-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/31a8e9f7-717a-42b5-82ad-7e5a19386850.png" alt="DGGI Digital Archival Policy Framework Overview">
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Explain that this policy creates a comprehensive digital preservation system that meets legal standards and protects evidence integrity.
+                </div>
+            </section>
+
+            <!-- Slide 3: Current Problems -->
+            <section class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h1>Why Do We Need This Policy?</h1>
+                    <div class="problem-cards">
+                        <div class="problem-card">
+							<div class="problem-icon">⚠️</div>
+							<h3>No Standardization</h3>
+							<p>No standardized way to preserve case records safely</p>
+							<div class="problem-details">
+								<img src="noStandardization.png?auto=format&fit=crop&w=600&q=80" alt="Standardization Image">
+								<div class="details-text">
+									Lack of standardization leads to inconsistent record keeping and increased risk of evidence loss.
+								</div>
+							</div>
+							<button class="close-btn" aria-label="Close">&times;</button>
+						</div>
+						<div class="problem-card">
+							<div class="problem-icon">📁</div>
+							<h3>Physical Risks</h3>
+							<p>Physical files can be lost, damaged, or destroyed</p>
+							<div class="problem-details">
+								<img src="physicalRisks.png?auto=format&fit=crop&w=600&q=80" alt="Physical Risks Image">
+								<div class="details-text">
+									Fire, flood, or theft can destroy physical evidence, making digital backups essential.
+								</div>
+							</div>
+							<button class="close-btn" aria-label="Close">&times;</button>
+						</div>
+						<div class="problem-card">
+							<div class="problem-icon">⚖️</div>
+							<h3>Court Rejections</h3>
+							<p>Courts often reject electronic evidence due to technical issues</p>
+							<div class="problem-details">
+								<img src="CourtRejections.png?auto=format&fit=crop&w=600&q=80" alt="Court Rejection Image">
+								<div class="details-text">
+									Without proper certification and chain of custody, courts may refuse to accept digital evidence.
+								</div>
+							</div>
+							<button class="close-btn" aria-label="Close">&times;</button>
+						</div>
+						<div class="problem-card">
+							<div class="problem-icon">🔍</div>
+							<h3>Missing Certification</h3>
+							<p>DGGI labs lack proper legal certification (Section 79A)</p>
+							<div class="problem-details">
+								<img src="LegalCertificationStatus.png?auto=format&fit=crop&w=600&q=80" alt="Certification Image">
+								<div class="details-text">
+									Legal certification is required for forensic labs to validate evidence for court.
+								</div>
+							</div>
+							<button class="close-btn" aria-label="Close">&times;</button>
+						</div>
+						<div class="problem-card">
+							<div class="problem-icon">💻</div>
+							<h3>System Gaps</h3>
+							<p>Existing systems (eOffice, GSTN) don't meet court standards</p>
+							<div class="problem-details">
+								<img src="systemGaps.png?auto=format&fit=crop&w=600&q=80" alt="System Gaps Image">
+								<div class="details-text">
+									Current digital systems lack features needed for legal admissibility and security.
+								</div>
+							</div>
+							<button class="close-btn" aria-label="Close">&times;</button>
+						</div>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Highlight the current challenges we face and why immediate action is needed to prevent evidence loss and court rejections.
+                </div>
+            </section>
+
+            <!-- Slide 4: Legal Framework -->
+            <section class="slide" data-slide="3">
+                <div class="slide-content">
+                    <h1>Key Laws Made Simple</h1>
+                    <div class="laws-grid problem-cards">
+                        <div class="problem-card">
+                            <div class="problem-icon">📜</div>
+                            <h3>BSA 2023</h3>
+                            <p>Accepts digital copies as original evidence if properly certified</p>
+                            <div class="problem-details">
+								<h4>
+                                <div class="details-text">
+                                    <strong>The Bharatiya Sakshya Adhiniyam (BSA) 2023 recognizes certified digital records as valid evidence, making digital archiving crucial for legal compliance.</strong>
+                                    <ul>
+                                        <li>Digital copies can be accepted as original evidence if properly certified.</li>
+                                        <li>The definition of "document" is broadened to include electronic and digital records, and the law explicitly recognizes electronic evidence.</li>
+                                        <li>Section 57: Electronic or digital records can be treated as primary evidence if proper custody and secure storage are ensured.</li>
+                                        <li>Section 61: The admissibility of evidence cannot be denied solely because it is electronic, provided there is compliance with Section 63 regarding procedures and requirements.</li>
+                                    </ul>
+                                    <p>
+                                        <strong>Practical Impact:</strong> DGGI must ensure digital records are securely stored and properly certified to be admissible in court under BSA 2023.
+                                    </p>
+                                    <p>
+                                        <strong>Key Compliance Steps:</strong>
+                                        <ol>
+                                            <li>Maintain secure custody and access logs for all digital evidence.</li>
+											<br/>
+                                            <li>Ensure certification procedures comply with Section 63.</li>
+											<br/>
+                                            <li>Train staff on digital evidence handling and certification.</li>
+                                        </ol>
+                                    </p>
+                                </div>
+								</h4>
+                                <button class="close-btn" aria-label="Close">&times;</button>
+                            </div>
+                        </div>
+                        <div class="problem-card">
+                            <div class="problem-icon">💼</div>
+                            <h3>Electronic Evidence Under GST Law</h3>
+                            <p>Allows certified electronic records in GST cases</p>
+                            <div class="problem-details">
+								<h4>
+									<div class="details-text">
+										<strong>Section 145 of the CGST Act permits certified electronic records in GST-related cases, streamlining evidence submission and reducing paperwork.</strong>
+										<ul>
+											<li>Section 145(1): Recognizes microfilms, facsimiles, printouts, and electronically stored information as admissible documents.</li>
+											<br/>
+											<li>Section 145(2): Requires certification describing the document, its creation, and device particulars for such electronic statements.</li>
+											<br/>
+											<li>Allows admissibility of electronic/digital records without needing original production, upon valid certification.</li>
+										</ul>
+									</div>
+								</h4>
+								<button class="close-btn" aria-label="Close">&times;</button>
+                            </div>
+                        </div>
+						<div class="problem-card">
+                            <div class="problem-icon">💼</div>
+                            <h3>IT Act</h3>
+                            <p>Labs must be notified as legal experts (DGGI labs currently not notified)</p>
+                            <div class="problem-details">
+								<h4>
+									<div class="details-text">
+										<strong>IT Act 2000 – Section 79A and Expert Certification</strong>
+										<ul>
+											<li>Section 79A: Notifies and specifies “Digital Evidence Examiner” as the authority for certifying electronic evidence.</li>
+											<br/>
+											<li>Emphasizes the need for DGGI labs to achieve and maintain Section 79A notification status to ensure forensic validity and legal acceptance of digital evidence.</li>
+											<br/>
+											<li>Certification under this section is critical for ensuring courts accept digital evidence as compliant with statutory requirements.</li>
+										</ul>
+									</div>
+								</h4>
+								<button class="close-btn" aria-label="Close">&times;</button>
+                            </div>
+                        </div>
+						<div class="problem-card">
+                            <div class="problem-icon">🎥</div>
+                            <h3>BNSS 2023</h3>
+                            <p>Requires video recording of evidence collection and proper tracking</p>
+                            <div class="problem-details">
+								<h4>
+									<div class="details-text">
+										<strong>Section 145 of the CGST Act permits certified electronic records in GST-related cases, streamlining evidence submission and reducing paperwork.</strong>
+										<ul>
+											<li>BNSS 2023 provisions (Sections 3, 105, 176(3), 180(3), 193(2)(i), 254, 265, 266, 349) promote electronic handling of evidence and forensic rigor.
+											<br/>
+											<li>Mandates:
+											<ul>
+												<li>Forensic investigation and mandatory audio-video recording during search, seizure, or handling of digital exhibits.</li>
+												<li>Explicit requirement for maintaining chain of custody for electronic devices/evidence.</li>
+											</ul>
+											</li>
+											<br/>
+											<li>Ensures scientific rigor, integrity, and transparency in criminal investigations for admissibility in court.</li>
+										</ul>
+									</div>
+								</h4>
+								<button class="close-btn" aria-label="Close">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="speaker-notes">
+                    Explain each law in simple terms and emphasize the urgent need for Section 79A notification to legitimize our forensic capabilities.
+                </div>
+            </section>
+
+            <!-- Slide 5: Court Requirements -->
+            <section class="slide" data-slide="4">
+                <div class="slide-content">
+                    <h1>What Judges Need for Evidence Acceptance</h1>
+                    <div class="requirements-flow">
+                        <div class="requirement-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Two-Part Certificate</h3>
+                                <p><strong>Part A:</strong> Officer who collected evidence<br>
+                                <strong>Part B:</strong> Technical expert</p>
+                            </div>
+                        </div>
+                        <div class="requirement-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Digital Fingerprint (Hash Value)</h3>
+                                <p>Unique code proving evidence hasn't been changed</p>
+                            </div>
+                        </div>
+                        <div class="requirement-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Chain of Custody</h3>
+                                <p>Complete record of who handled evidence and when</p>
+                            </div>
+                        </div>
+                        <div class="requirement-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Proper Certification</h3>
+                                <p>Lab must be legally authorized under Section 79A</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flowchart-image">
+                        <img src="AdmissibilityEE.png" alt="Electronic Evidence Admissibility Process">
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Emphasize that meeting these requirements is crucial for court acceptance. Without proper certification, evidence may be rejected.
+                </div>
+            </section>
+
+            <!-- Slide 6: Evidence Storage Process -->
+            <section class="slide" data-slide="5">
+                <div class="slide-content">
+                    <h1>How We Store Evidence - Simple Steps</h1>
+                    <div class="process-flow">
+                        <div class="process-step">
+                            <div class="step-circle">1</div>
+                            <h3>Seizure & Recording</h3>
+                            <p>Officer seizes evidence, records video, generates digital fingerprint</p>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-circle">2</div>
+                            <h3>Upload to Cloud</h3>
+                            <p>Evidence uploaded to secure government cloud with encryption</p>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-circle">3</div>
+                            <h3>Blockchain Entry</h3>
+                            <p>Record added to tamper-proof digital ledger for tracking</p>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-circle">4</div>
+                            <h3>Expert Certification</h3>
+                            <p>Forensic expert verifies and certifies the evidence</p>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="process-step">
+                            <div class="step-circle">5</div>
+                            <h3>Court Ready</h3>
+                            <p>Evidence available for court with all required certificates</p>
+                        </div>
+                    </div>
+                    <div class="process-images">
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/b6a8f56e-5c87-4f56-8b08-99d0573f74e1.png" alt="Digital Evidence Collection Process">
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/ae58b9eb-7236-4b66-a839-c179ed2a1bc2.png" alt="Blockchain Chain of Custody">
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Walk through each step explaining how technology ensures evidence integrity from collection to court presentation.
+                </div>
+            </section>
+
+            <!-- Slide 7: Technology Solutions -->
+            <section class="slide" data-slide="6">
+                <div class="slide-content">
+                    <h1>Cloud & Blockchain Technology</h1>
+                    <div class="tech-solutions">
+                        <div class="tech-card">
+                            <div class="tech-icon">☁️</div>
+                            <h3>Government Cloud Storage</h3>
+                            <p class="tech-desc">NIC Meghraj platform and DG Systems data centers</p>
+                            <div class="benefits">
+                                <span class="benefit-tag">Secure</span>
+                                <span class="benefit-tag">Compliant</span>
+                                <span class="benefit-tag">Disaster-Resistant</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon">🔗</div>
+                            <h3>Blockchain Technology</h3>
+                            <p class="tech-desc">Tamper-proof digital record book using Hyperledger Fabric</p>
+                            <div class="benefits">
+                                <span class="benefit-tag">Immutable</span>
+                                <span class="benefit-tag">Transparent</span>
+                                <span class="benefit-tag">Legally Accepted</span>
+                            </div>
+                        </div>
+                        <div class="tech-card">
+                            <div class="tech-icon">🔐</div>
+                            <h3>Encryption & Security</h3>
+                            <p class="tech-desc">AES-256 encryption, multi-factor authentication, role-based access</p>
+                            <div class="benefits">
+                                <span class="benefit-tag">Authorized Access</span>
+                                <span class="benefit-tag">Security Standards</span>
+                                <span class="benefit-tag">Protected</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-diagram">
+                        <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/e97cc900-8c1d-4291-95df-be5547aaf708.png" alt="Government Cloud Infrastructure">
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Explain how these technologies work together to create a secure, legally compliant evidence storage system.
+                </div>
+            </section>
+
+            <!-- Slide 8: Infrastructure Costs - Initial -->
+            <section class="slide" data-slide="7">
+                <div class="slide-content">
+                    <h1>Infrastructure Costs - Initial Investment</h1>
+                    <div class="cost-overview">
+                        <div class="total-cost">
+                            <h2>Total Initial Cost: ₹65 Crore</h2>
+                        </div>
+                        <div class="cost-chart">
+                            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/4e032e018b65eec4024bbfbae32e58bc/6a67deec-87a9-4fa0-8e19-3cf786e3b2af/116f41ff.png" alt="Initial Infrastructure Investment Breakdown">
+                        </div>
+                        <div class="cost-breakdown">
+                            <div class="cost-item">
+                                <h4>Digital Forensics Lab Equipment - ₹15 Cr</h4>
+                                <p>Forensic workstations, imaging tools, analysis software</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Blockchain Platform Development - ₹12 Cr</h4>
+                                <p>Hyperledger Fabric setup, smart contracts, consensus mechanism</p>
+                            </div>
+                            <div class="cost-item">
+                                <h4>Cloud Infrastructure Setup - ₹8 Cr</h4>
+                                <p>Government cloud setup, storage servers, compute resources</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Break down the major cost components. Emphasize that this is a one-time investment that will serve DGGI for years.
+                </div>
+            </section>
+
+            <!-- Slide 9: Infrastructure Costs - Annual -->
+            <section class="slide" data-slide="8">
+                <div class="slide-content">
+                    <h1>Infrastructure Costs - Annual Operations</h1>
+                    <div class="annual-costs">
+                        <div class="total-cost">
+                            <h2>Total Annual Cost: ₹20 Crore</h2>
+                        </div>
+                        <div class="cost-pie-chart">
+                            <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/4e032e018b65eec4024bbfbae32e58bc/36c2010c-f65a-4e85-a5b1-ac6136d98385/ad8167c0.png" alt="Annual Operational Costs Distribution">
+                        </div>
+                        <div class="budget-notes">
+                            <h3>Budgeting Notes:</h3>
+                            <ul>
+                                <li><strong>Personnel (30%):</strong> Skilled forensic experts and technical staff</li>
+                                <li><strong>Cloud Services (20%):</strong> Scalable based on evidence volume</li>
+                                <li><strong>Maintenance (12.5%):</strong> Regular updates and security patches</li>
+                                <li><strong>Security Audits (7.5%):</strong> Quarterly compliance checks</li>
+                                <li><strong>Contingency (7.5%):</strong> Emergency requirements and upgrades</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Explain the recurring costs and emphasize the importance of proper budgeting for skilled personnel and security maintenance.
+                </div>
+            </section>
+
+            <!-- Slide 10: Implementation Timeline -->
+            <section class="slide" data-slide="9">
+                <div class="slide-content">
+                    <h1>Implementation Timeline - Phase-wise Plan</h1>
+                    <div class="timeline">
+                        <div class="timeline-phase">
+                            <div class="phase-header short-term">
+                                <h3>Short-term (0-6 months)</h3>
+                                <div class="phase-priority">High Priority</div>
+                            </div>
+                            <ul class="phase-tasks">
+                                <li>Set up secure cloud infrastructure</li>
+                                <li>Implement hash generation at seizure points</li>
+                                <li>Start Section 79A notification process</li>
+                                <li>Train key personnel on new procedures</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-header mid-term">
+                                <h3>Mid-term (6-18 months)</h3>
+                                <div class="phase-priority">Medium Priority</div>
+                            </div>
+                            <ul class="phase-tasks">
+                                <li>Deploy blockchain for chain of custody</li>
+                                <li>Integrate with forensics labs and court systems</li>
+                                <li>Automate backup and recovery systems</li>
+                                <li>Complete staff training programs</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-header long-term">
+                                <h3>Long-term (18-36 months)</h3>
+                                <div class="phase-priority">Future Enhancement</div>
+                            </div>
+                            <ul class="phase-tasks">
+                                <li>Implement AI-driven anomaly detection</li>
+                                <li>Advanced metadata management</li>
+                                <li>Integration with DigiLocker and other systems</li>
+                                <li>International compliance reviews</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Emphasize the phased approach allows for gradual implementation while ensuring immediate security improvements.
+                </div>
+            </section>
+
+            <!-- Slide 11: Roles & Responsibilities -->
+            <section class="slide" data-slide="10">
+                <div class="slide-content">
+                    <h1>Roles & Responsibilities - Who Does What</h1>
+                    <div class="roles-grid">
+                        <div class="role-card">
+                            <div class="role-icon">👮</div>
+                            <h3>Investigating Officers</h3>
+                            <p>Evidence seizure, initial hash generation, video recording, chain of custody documentation</p>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-icon">🔬</div>
+                            <h3>Digital Forensics Experts</h3>
+                            <p>Technical analysis, expert certification, hash verification, court testimony</p>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-icon">💻</div>
+                            <h3>IT Department</h3>
+                            <p>Cloud management, encryption, system integration, security monitoring</p>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-icon">⚖️</div>
+                            <h3>Legal Team</h3>
+                            <p>Compliance oversight, court submission preparation, legal review of procedures</p>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-icon">📋</div>
+                            <h3>Archival Coordinators</h3>
+                            <p>Storage process management, retention compliance, audit coordination</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Clarify that everyone has a specific role to play in ensuring evidence integrity and legal compliance.
+                </div>
+            </section>
+
+            <!-- Slide 12: Thank You -->
+            <section class="slide" data-slide="11">
+                <div class="slide-content thank-you-slide">
+                    <div class="thank-you-content">
+                        <h1>Thank You</h1>
+                        <h2>Questions & Discussion</h2>
+                        <div class="benefits-summary">
+                            <h3>Expected Benefits:</h3>
+                            <div class="benefit-points">
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">✅</div>
+                                    <span>100% Court-Admissible Evidence</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">🔒</div>
+                                    <span>Tamper-Proof Security</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">⚡</div>
+                                    <span>Faster Case Resolution</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <div class="benefit-icon">💰</div>
+                                    <span>Reduced Evidence Loss Costs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="next-steps">
+                            <h3>Next Steps:</h3>
+                            <p>Approval for Phase 1 implementation and budget allocation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="speaker-notes">
+                    Summarize the key benefits and emphasize the immediate need for implementation to improve DGGI's evidence handling capabilities.
+                </div>
+            </section>
+			<div class="popup-overlay"></div>
+        </main>
+    </div>
+<script>
+	document.querySelectorAll('.key-points .expandable-point').forEach(point => {
+		point.addEventListener('click', function(e) {
+			// Prevent bubbling if clicking on details
+			if (e.target.classList.contains('point-details')) return;
+			// Collapse others
+			document.querySelectorAll('.key-points .expandable-point').forEach(p =>
+				p !== point ? p.classList.remove('expanded') : null
+			);
+			// Toggle this point
+			point.classList.toggle('expanded');
+		});
+	});
+
+	function updateOverlay() {
+    const overlay = document.querySelector('.popup-overlay');
+    const anyExpanded = document.querySelector('.problem-card.expanded');
+    if (overlay) {
+        overlay.style.display = anyExpanded ? 'block' : 'none';
+    }
+}
+
+document.querySelectorAll('.problem-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+        if (e.target.classList.contains('close-btn')) return;
+		if (e.target.closest('.problem-details')) return;
+		card.classList.add('expanded');
+        // document.querySelector('.popup-overlay').classList.add('active');
+        // document.querySelectorAll('.problem-card').forEach(c =>
+        //     c !== card ? c.classList.remove('expanded') : null
+        // );
+        // card.classList.toggle('expanded');
+        // updateOverlay();
+    });
+    const closeBtn = card.querySelector('.close-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            card.classList.remove('expanded');
+			btn.closest('.problem-card').classList.remove('expanded');
+        	document.querySelector('.popup-overlay').classList.remove('active');
+            //updateOverlay();
+            e.stopPropagation();
+        });
+    }
+});
+
+const overlay = document.querySelector('.popup-overlay');
+if (overlay) {
+    overlay.addEventListener('click', function() {
+        document.querySelectorAll('.problem-card.expanded').forEach(card => {
+            card.classList.remove('expanded');
+        });
+        updateOverlay();
+    });
+}
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
